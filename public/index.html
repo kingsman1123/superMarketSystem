@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>超市账单管理系统</title>
+		<link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<!--头部-->
+			<div class="head">
+				<div class="head-left">
+					<h1><a href="index.html">超市账单管理系统</a></h1>
+				</div>
+			    <div class="head-right">
+			        <p><span class="hours">你好</span><span style="color: #fff21b"> Admin</span> , 欢迎你！</p>
+			        <a class="logout" type="button" href="login.html">退出</a>
+			    </div>
+			</div>
+			<!--时间-->
+			<section class="indexTime">
+			    <span id="time">2018年1月1日 01:01  星期一</span>
+			    <a href="#">温馨提示：为了能正常浏览，请使用高版本浏览器！（IE10+）</a>
+			</section>
+			<!--主体-->
+			<div class="indexMain">
+				<!--左侧-->
+				<div class="main-left">
+	                <ul class="nav nav-tabs nav-stacked" >
+	                    <li>
+	                        <a href="#"style="border:none; color:#000000;">
+	                            <i class="glyphicon glyphicon-th-large"></i>
+	                           		 功能列表
+	                        </a>
+	                    </li>
+	                    	<!--商品管理-->
+	                    <li>
+	                        <a href="#goodsSetting" class="nav-header collapsed" data-toggle="collapse" >
+	                            <i class="glyphicon glyphicon-cog"></i>
+	                            		商品管理
+	                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+	                        </a>
+	                        <ul id="goodsSetting" class="nav nav-list collapse secondmenu" >
+	                        	<li><a class="billManage"><i class="glyphicon glyphicon-th-list" ></i>账单管理</a></li>
+	                            <li><a class="vendorManage"><i class="glyphicon glyphicon-print"></i>供应商管理</a></li>	                            	                  
+	                        </ul>
+	                    </li>
+	                    	<!--用户管理-->
+	                    <li>
+	                        <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse" >
+	                            <i class="glyphicon glyphicon-cog"></i>
+	                            		系统管理
+	                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+	                        </a>
+	                        <ul id="systemSetting" class="nav nav-list collapse secondmenu" >	                        	
+	                        	<li><a class="userManage"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
+	                            <li><a class="addManager"><i class="glyphicon glyphicon-plus"></i>添加管理员</a></li>
+	                            <li><a class="amendPassword"><i class="glyphicon glyphicon-edit"></i>修改密码</a></li>	                  
+	                        </ul>
+	                    </li>
+	                    <li>
+	                    	<a href="#" class="logoutSetting" >
+	                            <i class="glyphicon glyphicon-log-out"></i>
+	                            		退出系统            
+	                        </a>
+	                    </li>
+
+	                </ul>
+				</div>
+				<!--右侧-->
+				<div class="main-right">
+					<div class="indexBox">
+						<div class="indexDetails">
+							<h2>Admin</h2>
+							<p>欢迎来到超市账单管理系统!</p>
+							<span class="hours">你好</span>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		
+		
+		<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+		<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/lib/ejs/ejs.min.js"></script>
+		<script src="/js/common/index.js"></script>
+	</body>
+</html>

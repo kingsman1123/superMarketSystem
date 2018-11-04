@@ -1,0 +1,359 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+a{text-decoration: none !important;cursor: pointer !important;}
+
+
+.container{
+	width: 100%;
+	height: 100%;
+}
+.head{
+	height: 48px;
+	width: 1250px;
+	margin: 0 auto;
+	padding:10px 40px;
+	background: #5f9ddb;
+}
+.head .head-left{
+	float: left;
+	height: 100%;
+	padding-left:50px;
+	background: url(../images/buy.png) no-repeat left;
+}
+.head .head-left h1{
+	margin: 0;
+	font-size: 24px;
+}
+.head h1 a{
+	color:white;
+}
+.head .head-right{
+	float: right;
+	height: 100%;
+	width: 240px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.head .head-right p{
+	margin: 0;
+	font-weight: bold;
+	color:#ffffff;
+}
+.head .head-right .logout{
+	display: block;
+	width: 50px;
+	height: 30px;
+	line-height: 30px;
+	background: #a3d967;
+	text-align: center;
+	border-radius:5px;
+	color:#ffffff;
+	font-weight: bold;
+}
+
+/*时间*/
+.indexTime{
+	width:1250px;
+	height: 28px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #e4edf6;
+	border-bottom: 1px solid #c2ccd5;
+}
+.indexTime #time{
+	background: url(../images/time.png) no-repeat left;
+	padding-left:25px;
+}
+
+/*主体*/
+.indexMain{
+	width: 1250px;
+	height: 550px;
+	margin: 0 auto;	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.indexMain .main-left{
+	width: 166px;
+	height: 100%;
+	float: left;
+	background: url(../images/leftBg.png) 0 0 repeat-y;
+	border-right: 1px solid #e0e0e0; 
+	box-shadow: 5px 0px 0px rgba(0,0,0,0.07);
+}
+.indexMain .main-left .nav-tabs{
+	border: none;
+	padding-left:1px;
+}
+.indexMain .main-left #goodsSetting li a{
+	color:#31B0D5;
+}
+.indexMain .main-left #systemSetting li a{
+	color:#31B0D5;
+}
+.indexMain .main-right{
+	width: 1078px;
+	height: 550px;
+	
+}
+ /*点击主页*/
+.indexMain .main-right .indexBox{
+	width: 1078px;
+	height: 550px;
+	position: relative;
+	background: url(../images/clock.jpg) no-repeat 80px 60px;
+}
+.indexMain .main-right .indexBox .indexDetails{
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	left:200px;
+	top:60px;
+}
+.indexMain .main-right .indexBox .indexDetails h2{
+	margin: 10px 0;
+}
+.indexMain .main-right .indexBox .indexDetails p{
+	margin-bottom: 5px;
+}
+
+/*账单管理*/
+.indexMain .main-right .billmanagerBox{
+	width: 1078px;
+	height: 550px;
+	padding-left: 10px;
+	padding-top:5px;	
+}
+.indexMain .main-right .billmanagerBox .location{
+	height: 30px;
+	line-height: 30px;
+	padding-left:60px;
+	background: url(../images/home.png) no-repeat 30px center;
+	margin: 0 auto;
+	border: 1px solid #e6eaf6;
+	border-radius: 10px;
+}
+.indexMain .main-right .billmanagerBox .location span{
+	color:#21a2d6;
+	font-weight: bold;
+}
+.indexMain .main-right .billmanagerBox .search{
+	height: 50px;
+	line-height: 50px;
+	padding-left:30px;
+	display: flex;
+	align-items: center;
+	background: #f6fafd;
+}
+.indexMain .main-right .billmanagerBox .search input{
+	height: 30px;
+	border:1px solid #8ab2d5;
+	padding-left:10px;
+}
+.indexMain .main-right .billmanagerBox .search select{
+	height: 30px;
+	border:1px solid #8ab2d5;
+}
+.indexMain .main-right .billmanagerBox .search .btn-search{
+	margin-left: 30px;
+	font-weight: bold;
+	color:#ffffff;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+	border: none;
+	background:#87c212 url(../images/search.png) no-repeat 12px;
+}
+.indexMain .main-right .billmanagerBox .search span{
+	margin-left: 6px;
+}
+.indexMain .main-right .billmanagerBox .search .btn-addbill{
+	font-weight: bold;
+	color:#ffffff;
+	width: 100px;
+	height: 30px;
+	line-height: 15px;
+	padding-left: 22px;
+	border-radius: 5px;
+	border: none;
+	margin-left:160px;
+	background:#47acf1 url(../images/tianjia.png) no-repeat 5px;
+}
+/*供应商管理*/
+.indexMain .main-right .vendormanagerBox{
+	width: 1078px;
+	height: 550px;
+	padding-left: 10px;
+	padding-top:5px;	
+}
+.indexMain .main-right .vendormanagerBox .location{
+	height: 30px;
+	line-height: 30px;
+	padding-left:60px;
+	background: url(../images/home.png) no-repeat 30px center;
+	margin: 0 auto;
+	border: 1px solid #e6eaf6;
+	border-radius: 10px;
+}
+.indexMain .main-right .vendormanagerBox .location span{
+	color:#21a2d6;
+	font-weight: bold;
+}
+.indexMain .main-right .vendormanagerBox .search{
+	height: 50px;
+	line-height: 50px;
+	padding-left:30px;
+	display: flex;
+	align-items: center;
+	background: #f6fafd;
+}
+.indexMain .main-right .vendormanagerBox .search input{
+	height: 30px;
+	border:1px solid #8ab2d5;
+	padding-left:10px;
+}
+.indexMain .main-right .vendormanagerBox .search select{
+	height: 30px;
+	border:1px solid #8ab2d5;
+}
+.indexMain .main-right .vendormanagerBox .search .btn-search{
+	margin-left: 30px;
+	font-weight: bold;
+	color:#ffffff;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+	border: none;
+	background:#87c212 url(../images/search.png) no-repeat 12px;
+}
+.indexMain .main-right .vendormanagerBox .search span{
+	margin-left: 6px;
+}
+.indexMain .main-right .vendormanagerBox .search .btn-addventor{
+	font-weight: bold;
+	color:#ffffff;
+	width: 115px;
+	height: 30px;
+	line-height: 15px;
+	padding-left: 28px;
+	border-radius: 5px;
+	border: none;
+	margin-left:505px;
+	background:#47acf1 url(../images/tianjia.png) no-repeat 5px;
+}
+
+/*用户管理*/
+.indexMain .main-right .usermanagerBox{
+	width: 1078px;
+	height: 550px;
+	padding-left: 10px;
+	padding-top:5px;	
+}
+.indexMain .main-right .usermanagerBox .location{
+	height: 30px;
+	line-height: 30px;
+	padding-left:60px;
+	background: url(../images/home.png) no-repeat 30px center;
+	margin: 0 auto;
+	border: 1px solid #e6eaf6;
+	border-radius: 10px;
+}
+.indexMain .main-right .usermanagerBox .location span{
+	color:#21a2d6;
+	font-weight: bold;
+}
+.indexMain .main-right .usermanagerBox .search{
+	height: 50px;
+	line-height: 50px;
+	padding-left:30px;
+	display: flex;
+	align-items: center;
+	background: #f6fafd;
+}
+.indexMain .main-right .usermanagerBox .search input{
+	height: 30px;
+	border:1px solid #8ab2d5;
+	padding-left:10px;
+}
+.indexMain .main-right .usermanagerBox .search select{
+	height: 30px;
+	border:1px solid #8ab2d5;
+}
+.indexMain .main-right .usermanagerBox .search .btn-search{
+	margin-left: 30px;
+	font-weight: bold;
+	color:#ffffff;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+	border: none;
+	background:#87c212 url(../images/search.png) no-repeat 12px;
+}
+.indexMain .main-right .usermanagerBox .search span{
+	margin-left: 6px;
+}
+.indexMain .main-right .usermanagerBox .search .btn-adduser{
+	font-weight: bold;
+	color:#ffffff;
+	width: 110px;
+	height: 30px;
+	line-height: 15px;
+	padding-left: 28px;
+	border-radius: 5px;
+	border: none;
+	margin-left:500px;
+	background:#47acf1 url(../images/tianjia.png) no-repeat 5px;
+}
+
+/*密码修改页面*/
+.indexMain .main-right .amendpasswordBox{
+	width: 1078px;
+	height: 550px;
+	padding-left: 10px;
+	padding-top:5px;
+}
+.indexMain .main-right .amendpasswordBox .location{
+	height: 30px;
+	line-height: 30px;
+	padding-left:60px;
+	background: url(../images/home.png) no-repeat 30px center;
+	margin: 0 auto;
+	border: 1px solid #e6eaf6;
+	border-radius: 10px;
+}
+.indexMain .main-right .amendpasswordBox .location span{
+	color:#21a2d6;
+	font-weight: bold;
+}
+.indexMain .main-right .amendpasswordBox .editpassword-form{
+	width: 500px;
+	height: 300px;
+	margin-top:100px;
+	margin-left:120px;
+}
+.indexMain .main-right .amendpasswordBox .editpassword-form .form-group{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+} 
+
+/*添加管理员*/
+.indexMain .main-right .addmanagerBox{
+	width: 1078px;
+	height: 550px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.indexMain .main-right .addmanagerBox .manager-form{
+	width: 500px;
+	height: 300px;
+	margin-top:50px;
+	margin-right:200px;
+} 
