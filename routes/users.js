@@ -10,18 +10,25 @@ router.get('/', function(req, res, next) {
 });
 
 
-//login 完整路径"/api/users/login"
-	router.post('/login',adminService.login);
-	
+//admin login 完整路径"/api/users/login"
+router.post('/login',adminService.login);
+
+//admin register 完整路径"/api/users/register"
+router.post('/register',adminService.register);
+
 //manage-user 的完整路径"/api/users/adduser"
-	router.post('/adduser',userService.add);
+router.post('/adduser',userService.add);
 	
-//按页查询职位
-// 完整路径 "/api/users/find_by_page?page=?"
+//按页查询职位 完整路径 "/api/users/find_by_page?page=?"
 router.get("/find_by_page",userService.findByPage);
 
 //删除 完整路径"/api/users/removeuser"
 router.post("/removeuser",userService.remove);
-//修改
-router.post("/updata",userService.upData);
+
+//修改,更新 完整路径 "/api/users/update"
+router.post("/update",userService.upDate);
+
+//注销  完整路径"/api/users/logout"
+router.get("/logout",adminService.logout);
+
 module.exports = router;

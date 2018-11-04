@@ -24,13 +24,17 @@ $.extend(UserModel.prototype,{
 	//注册事件监听
 	addListener(){
 		$(".btnAdd").on("click",this.addHandler);
+		
 		//翻页
 		$(".pagination").on("click","a",$.proxy(this.loadDataHandler,this));
+		
 		//删除(委派方式)
 		$(".table-user tbody").on("click",".removeUser",this.removeHandler);
-//		$(".removeUser").on("click",this.removeHandler);
-		$(".table-user tbody").on("click",".amendUser img",$.proxy(this.updata,this));
+		
+		//修改
+		$(".table-user tbody").on("click",".amendUser img",$.proxy(this.update,this));
 	},
+	
 	//点击翻页操作(事件函数)
 	loadDataHandler(event){
 		const page = Number($(event.target).text());
@@ -38,6 +42,7 @@ $.extend(UserModel.prototype,{
 		//标签类名
 		$(event.target).parent("li").addClass("active").siblings("li").removeClass("active");
 	},
+	
 	//初始加载数据
 	loadData(page){
 		page =page;
@@ -53,6 +58,7 @@ $.extend(UserModel.prototype,{
 			}
 		});
 	},
+	
 	//添加
 	addHandler(){
 		var data = $(".adduser-form").serialize();
@@ -74,8 +80,13 @@ $.extend(UserModel.prototype,{
 					const html = ejs.render(UserModel.RowTemplate, data.res_body.data)
 					// 显示
 					$(".table-user tbody").append(html);
+//					//显示加载第一页
+//					this.loadData(1);
+					//清除模态框数据
+				 	$(this).removeData('#adduserModal');
 					// 关闭模态框
 					$("#adduserModal").modal("hide");
+					
 				} else { // 添加失败
 					$(".add-user-error").removeClass("hidden");
 				}
@@ -84,34 +95,44 @@ $.extend(UserModel.prototype,{
 	},
 	//删除
 	removeHandler(event){
-		var src = event.target;
-		var tr = $(src).parents("tr");
+		const src = event.target;
+		const tr = $(src).parents("tr");
 		//删除数据库中的数据
 		const url = "/api/users/removeuser";
-		const data= {id:tr.find("td:first").text()};
+		const data= {id:tr.find("td:first").text()}; //对象形式
 		//post请求
 		$.post(url, data, (data)=>{
 				if (data.res_code === 1) { // 删除成功
 					//删除dom数据	
 					tr.remove();
+					alert("删除成功");
 				} else { // 失败					
 					alert(data.res_err);
 				}
 			}, "json")
 	},
-	//修改
-	updata(event){
+	//修改,更新(事件操作)
+	update(event){
+		//显示模态框
 		$("#adduserModal").modal("show");
 		const src = event.target;
 		const id = $(src).parents("tr").find("td:eq(0)").text();
-		console.log(this)
-		$(".xiugai111").on("click",()=>{
-			alert("54")
-			const url = "/api/users/updata";
+		$(".btnUpdate").on("click",()=>{
+			//请求路径
+			const url = "/api/users/update";
+			//请求的数据
 			const data = $(".adduser-form").serialize() + "&id="+id;
+			//发送post请求
 			$.post(url,data,(data)=>{
-				alert("修改成功!")
-			});
+				//加载默认的第一页
+				this.loadData(1);
+//				//清除模态框数据(无用)
+//				$('body').on('hidden.bs.modal', '.modal', function () {
+//  				$(this).removeData('bs.modal');
+//					});
+				// 关闭模态框
+				$("#adduserModal").modal("hide");				
+				});
 			});
 		
 	}

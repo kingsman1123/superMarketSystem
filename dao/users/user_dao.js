@@ -2,7 +2,6 @@
 const {User} = require("../model/model.js");
 
 //数据访问层
-
 const UserDao = {
 	//保存方法
 	save(userinfo){
@@ -24,9 +23,8 @@ const UserDao = {
 	remove(id){
 		return User.remove({_id:id});
 	},
-	//修改
-	upData(option){
-		console.log(option);
+	//修改,更新
+	upDate(option){
 		return User.findOneAndUpdate({_id:option.id},option)
 	}
 }

@@ -14,8 +14,9 @@
 					<h1><a href="index.html">超市账单管理系统</a></h1>
 				</div>
 			    <div class="head-right">
-			        <p><span class="hours">你好</span><span style="color: #fff21b"> Admin</span> , 欢迎你！</p>
-			        <a class="logout" type="button" href="login.html">退出</a>
+			        <p><span class="hours">你好</span><span style="color: #fff21b" class="manager-name"></span> , 欢迎你！</p>
+			        <a class="all-log login hidden" type="button"  href="/html/login.html">登录</a>
+			        <a class="all-log logout" type="button"  href="#">退出</a>
 			    </div>
 			</div>
 			<!--时间-->
@@ -34,19 +35,7 @@
 	                           		 功能列表
 	                        </a>
 	                    </li>
-	                    	<!--商品管理-->
-	                    <li>
-	                        <a href="#goodsSetting" class="nav-header collapsed" data-toggle="collapse" >
-	                            <i class="glyphicon glyphicon-cog"></i>
-	                            		商品管理
-	                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
-	                        </a>
-	                        <ul id="goodsSetting" class="nav nav-list collapse secondmenu" >
-	                        	<li><a class="billManage"><i class="glyphicon glyphicon-th-list" ></i>账单管理</a></li>
-	                            <li><a class="vendorManage"><i class="glyphicon glyphicon-print"></i>供应商管理</a></li>	                            	                  
-	                        </ul>
-	                    </li>
-	                    	<!--用户管理-->
+	                    	<!--系统管理-->
 	                    <li>
 	                        <a href="#systemSetting" class="nav-header collapsed" data-toggle="collapse" >
 	                            <i class="glyphicon glyphicon-cog"></i>
@@ -59,20 +48,33 @@
 	                            <li><a class="amendPassword"><i class="glyphicon glyphicon-edit"></i>修改密码</a></li>	                  
 	                        </ul>
 	                    </li>
+	                    
+	                    <!--商品管理-->
 	                    <li>
-	                    	<a href="#" class="logoutSetting" >
+	                        <a href="#goodsSetting" class="nav-header collapsed" data-toggle="collapse" >
+	                            <i class="glyphicon glyphicon-modal-window"></i>
+	                            		商品管理
+	                            <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+	                        </a>
+	                        <ul id="goodsSetting" class="nav nav-list collapse secondmenu" >
+	                        	<li><a class="billManage"><i class="glyphicon glyphicon-th-list" ></i>账单管理</a></li>
+	                            <li><a class="vendorManage"><i class="glyphicon glyphicon-print"></i>供应商管理</a></li>	                            	                  
+	                        </ul>
+	                    </li>
+	                    <!--退出系统-->
+						<li>
+	                    	<a href="html/login.html" class="logoutSetting" >
 	                            <i class="glyphicon glyphicon-log-out"></i>
 	                            		退出系统            
 	                        </a>
 	                    </li>
-
 	                </ul>
 				</div>
 				<!--右侧-->
 				<div class="main-right">
 					<div class="indexBox">
 						<div class="indexDetails">
-							<h2>Admin</h2>
+							<h2 class="manager-name">Admin</h2>
 							<p>欢迎来到超市账单管理系统!</p>
 							<span class="hours">你好</span>
 						</div>

@@ -39,7 +39,7 @@ a{text-decoration: none !important;cursor: pointer !important;}
 	font-weight: bold;
 	color:#ffffff;
 }
-.head .head-right .logout{
+.head .head-right .all-log{
 	display: block;
 	width: 50px;
 	height: 30px;
@@ -114,6 +114,8 @@ a{text-decoration: none !important;cursor: pointer !important;}
 	top:60px;
 }
 .indexMain .main-right .indexBox .indexDetails h2{
+	width: 200px;
+	height: 33px;
 	margin: 10px 0;
 }
 .indexMain .main-right .indexBox .indexDetails p{

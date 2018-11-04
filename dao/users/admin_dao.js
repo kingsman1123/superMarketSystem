@@ -5,12 +5,13 @@ const  {Admin} = require("../model/model.js");
 
 const AdminDao = {
 	//保存方法
-	save(){
-		
+	save(admininfo){
+		const admin = new Admin(admininfo);
+		return admin.save();	//以promise对象返回
 	},
 	//查找方法
 	find(condition){
-		return User.find(condition);
+		return Admin.find(condition);
 	}
 }
 

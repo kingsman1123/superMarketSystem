@@ -3,16 +3,6 @@ const UserDao = require("../dao/users/user_dao.js");
 
 //业务逻辑层
 const UserService = {
-//	//登录处理
-//	login(req,res,next){
-//		//post 请求
-//		const {username,password} = res.body;
-//		
-//		//数据访问
-//		UserDao.find({username})
-//				.then()
-//				.catch();
-//	},
 	//添加
 	add(req,res,next){
 		//post 方法
@@ -41,28 +31,6 @@ const UserService = {
 						});
 				});
 		},
-	//删除一行数据
-	remove(req,res,next){
-		//获取查询行数的id的值
-		const {id} = req.body;
-		UserDao.remove(id)
-				.then((data)=>{
-					res.json({
-						res_code:1,
-						res_error:"",
-						res_body:{
-							data:data
-						}
-					})
-				})
-				.catch((err)=>{
-					res.json({
-						res_code:0,
-						res_error:err,
-						res_body:{}
-					})
-				});
-	},
 	//翻页查询
 	findByPage(req,res,next){
 		//获取查询页码
@@ -88,12 +56,35 @@ const UserService = {
 					});
 		
 	},
-	upData(req,res,next){
+	//删除一行数据
+	remove(req,res,next){
+		//获取查询行数的id的值
+		const {id} = req.body;
+		UserDao.remove(id)
+				.then((data)=>{
+					res.json({
+						res_code:1,
+						res_error:"",
+						res_body:{
+							data:data
+						}
+					})
+				})
+				.catch((err)=>{
+					res.json({
+						res_code:0,
+						res_error:err,
+						res_body:{}
+					})
+				});
+	},
+	//修改，更新
+	upDate(req,res,next){
 		const {username,sex,age,tell,userstyle,id} = req.body;	
 		
 		const option = {username,sex,age,tell,userstyle,id};
 		
-		UserDao.upData(option)
+		UserDao.upDate(option)
 					.then((data)=>{
 						res.json({
 							res_code:1,
