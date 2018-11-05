@@ -37,7 +37,7 @@ $.extend(Index.prototype,{
 			}
 		});
 	},
-	//注销处理1
+	//注销处理2
 	logoutHandler2(){
 		sessionStorage.removeItem("username");//移除 
 		$.getJSON("/api/users/logout",(data)=>{
@@ -62,7 +62,9 @@ $.extend(Index.prototype,{
 		});
 	},
 	managerHandler5(){
-		$(".main-right").load("../../html/include/manage-password.html");
+		$(".main-right").load("../../html/include/manage-password.html",()=>{
+			$.getScript("/js/common/user_model.js");
+		});
 	},
 	timeSetting(){
 		setInterval($.proxy((this.fnDate),this),1);

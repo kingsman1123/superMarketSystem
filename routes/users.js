@@ -16,6 +16,9 @@ router.post('/login',adminService.login);
 //admin register 完整路径"/api/users/register"
 router.post('/register',adminService.register);
 
+//admin updatePass  完整路径 "/api/users/updatePass"
+router.post('/updatePass',adminService.updatePass);
+
 //manage-user 的完整路径"/api/users/adduser"
 router.post('/adduser',userService.add);
 	

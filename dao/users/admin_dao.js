@@ -12,6 +12,11 @@ const AdminDao = {
 	//查找方法
 	find(condition){
 		return Admin.find(condition);
+	},
+	//修改密码
+	updatePass(option){
+		console.log(option);
+		return Admin.update({password:option.oriPassword},{password:option.nowPassword})
 	}
 }
 

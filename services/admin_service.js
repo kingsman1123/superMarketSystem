@@ -89,6 +89,27 @@ const AdminService = {
 					});
 				});
 	},
+	//更新密码
+	updatePass(req,res,next){
+		const {oriPassword,nowPassword,confPassword} = req.body;
+		const option = {oriPassword,nowPassword,confPassword};
+		
+		AdminDao.updatePass(option)
+				.then((data)=>{
+					res.json({
+						res_code:1,
+						res_error:"",
+						res_body:{password:option.nowPassword}
+					})
+				})
+				.catch((err)=>{
+					res.json({
+						res_code:0,
+						res_error:err,
+						res_body:{}						
+					});
+				});
+	},
 	//注销
 	logout(req,res,next){
 		username = null;

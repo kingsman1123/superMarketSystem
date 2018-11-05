@@ -33,6 +33,9 @@ $.extend(UserModel.prototype,{
 		
 		//修改
 		$(".table-user tbody").on("click",".amendUser img",$.proxy(this.update,this));
+		
+		//更新
+		$(".btn-edit-password").on("click",this.updatePass);
 	},
 	
 	//点击翻页操作(事件函数)
@@ -133,8 +136,22 @@ $.extend(UserModel.prototype,{
 				// 关闭模态框
 				$("#adduserModal").modal("hide");				
 				});
-			});
-		
+			});		
+	},
+	//修改密码
+	updatePass(){
+		const data = $(".editpassword-form").serialize();
+		console.log(data);
+		const url = "/api/users/updatePass";
+		//post请求
+		$.post(url,data,(data)=>{
+			if(data.res_code === 1){
+				alert("修改成功");
+			}else{
+				alert("修改失败");
+			}
+		},"json");
+		return false;
 	}
 });
 
